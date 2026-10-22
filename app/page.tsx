@@ -1,4 +1,4 @@
-import { ChatPanel } from "@/components/chat-panel";
+import { TodoApp } from "@/components/todo-app";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           <div className="nav-actions">
             <button className="ghost-button">Features</button>
             <button className="ghost-button">Pricing</button>
-            <button className="primary-button">Try now</button>
+            <a href="/todo" className="primary-button">Open To-do App</a>
           </div>
         </div>
 
@@ -25,7 +25,7 @@ export default function Home() {
               coding, research, and everyday productivity.
             </p>
             <div className="cta-row">
-              <button className="primary-button large">Launch app</button>
+              <a href="/todo" className="primary-button large">Launch app</a>
               <button className="secondary-button large">View demo</button>
             </div>
             <div className="trust-row">
@@ -49,7 +49,13 @@ export default function Home() {
         </div>
       </section>
 
-      <ChatPanel />
+      <section className="app-promo">
+        <div className="app-promo-card">
+          <h2>Need a quick productivity tool?</h2>
+          <p>Try the built-in to-do app with local storage so your tasks stay saved in the browser.</p>
+          <a href="/todo" className="primary-button">Open to-do app</a>
+        </div>
+      </section>
     </main>
   );
 }
